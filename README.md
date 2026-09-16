@@ -31,3 +31,6 @@ All ten supplied dashboard/MT5 images and the original four brand assets are inc
 ## Repository handoff
 Requested destination: https://github.com/CELESTIALNEXUSGROUP/CELESTIALNEXUS.git
 Access is currently blocked (GitHub 404 through the connected account). Do not replace existing target history or include secrets when synchronizing. The .openai/hosting.json identity belongs to the existing Site and must remain unchanged for Site publication.
+
+## Vercel hosting and visual system
+Native Next.js deployment is configured in `vercel.json`. Follow [the Vercel setup guide](docs/VERCEL.md) for deployment, environment variables and the deliberately closed investor room on Vercel. Shared gradients, elevation, hover colours and accessible motion live in `app/premium.css`. Existing Sites builds are retained.

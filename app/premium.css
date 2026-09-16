@@ -1,0 +1,48 @@
+/* Shared visual system: small, finite motion; product images remain unaltered. */
+:root{--border:#293346;--surface-raised:#141e30;--gold-bright:#f2dba9;--emerald:#78cdb7;--shadow-soft:0 14px 36px #0003;--shadow-deep:0 28px 65px #0006;--ease-premium:cubic-bezier(.22,.61,.36,1)}
+body{background:radial-gradient(ellipse at 100% 0,#21364a22,transparent 42%),#0a0d18}
+.header{background:linear-gradient(110deg,#090c16f5,#131d2af5);box-shadow:0 5px 25px #0003;border-bottom-color:#d7b66d29}
+.hero,.page-hero{background:radial-gradient(ellipse at 85% 15%,#87734226,transparent 48%),linear-gradient(125deg,#0a0f1d,#101827 65%,#101e26)}
+.hero-copy h1>span,.page-hero h1 .gold{background:linear-gradient(115deg,#f0dcaf,#c9a454 60%,#e6c88c);background-clip:text;-webkit-background-clip:text;color:transparent}
+.announcement,.badge{background:linear-gradient(115deg,#302819cc,#181d27);border-color:#c6a96860;box-shadow:inset 0 1px #ffe4a811}
+.section:nth-of-type(even){background:linear-gradient(140deg,#10182799,#0b111c55)}
+.feature,.content-section,.flow-node,.pricing-card,.roadmap-card,.product-video,.runtime-architecture,.console-explain,[data-slot=card]{background:linear-gradient(135deg,#172235,#0d1422 62%,#111d26);border-color:#53617a55;box-shadow:var(--shadow-soft),inset 0 1px #e3c8900d}
+.feature,.evidence-card,.trust-grid a,.pricing-card,.roadmap-card,[data-slot=card]{transition:transform .32s var(--ease-premium),box-shadow .32s var(--ease-premium),border-color .25s,background-color .25s}
+.evidence-card,.joan-portrait,.concept,.architecture,.runtime-architecture,.product-video{border-radius:12px;overflow:hidden;box-shadow:var(--shadow-deep),0 0 0 1px #d7b56f08}
+.evidence-image{background:linear-gradient(135deg,#141f31,#090e19)}
+.evidence-image img,.joan-portrait img{transition:transform .55s var(--ease-premium),opacity .4s;image-rendering:auto}
+.button,.nav-cta,[data-slot=button]{transition:transform .25s var(--ease-premium),box-shadow .25s,color .25s,border-color .25s;background-clip:padding-box}
+.gold-button{background:linear-gradient(115deg,#f1dba8,#d4b378 48%,#b98e4f)!important;box-shadow:0 6px 22px #b8924026,inset 0 1px #fff6}
+.outline-button,.nav-cta{background:linear-gradient(115deg,#1b2433aa,#0d1522aa);border-color:#bca36a70}
+.text-link svg,.button svg,.nav-cta svg{transition:transform .25s var(--ease-premium)}
+input,textarea,select{background:linear-gradient(135deg,#111b2d,#0b121f)!important;box-shadow:inset 0 2px 5px #0003;transition:border-color .2s,box-shadow .2s}
+input:focus-visible,textarea:focus-visible,select:focus-visible{border-color:#d2b777!important;box-shadow:0 0 0 4px #cfb07a18}
+[data-slot=accordion-item]{border-color:#49546a80}
+[data-slot=accordion-trigger]{transition:color .2s,background-color .2s}
+[data-slot=accordion-trigger][data-state=open]{color:var(--gold-bright)}
+[data-slot=tabs-trigger][data-state=active]{background:linear-gradient(120deg,#3b3324,#1d2935)!important;color:#f2dba9!important;box-shadow:inset 0 -2px #cbaa64}
+.capability-table{border-radius:10px;box-shadow:var(--shadow-soft)}
+thead{background:linear-gradient(110deg,#202939,#161d2b)}
+tbody tr{transition:background-color .2s}tbody tr:nth-child(even){background:#ffffff03}
+.evidence-dialog,[data-slot=dialog-content],[data-slot=sheet-content]{background:linear-gradient(135deg,#172033,#0a111e)!important;border-color:#b99a6460!important;box-shadow:0 35px 100px #0009}
+.cta-band{background:radial-gradient(ellipse at 0 50%,#a3823b26,transparent 60%),linear-gradient(120deg,#151d2a,#0d1921);box-shadow:inset 0 1px #d3b67825}
+footer{background:linear-gradient(165deg,#0d1422,#070b13)}
+.footer-grid a,.legal-links a{transition:color .2s,text-decoration-color .2s;text-decoration:underline;text-decoration-color:transparent;text-underline-offset:5px}
+.error-page{background:radial-gradient(ellipse at 50% 15%,#b7995420,transparent 65%)}
+@media(hover:hover) and (pointer:fine){
+.feature:hover,.evidence-card:hover,.pricing-card:hover,.roadmap-card:hover,[data-slot=card]:hover{transform:translateY(-5px);border-color:#d6b57499;box-shadow:0 22px 48px #0006,0 0 24px #b89a5110}
+.evidence-card:hover .evidence-image img,.joan-portrait:hover img{transform:scale(1.025);opacity:1}
+.gold-button:hover{box-shadow:0 10px 30px #d5af5840;transform:translateY(-2px);color:#070b10!important;background:linear-gradient(115deg,#fae7bb,#e1c38a,#d1ac6f)!important}
+.outline-button:hover,.nav-cta:hover{color:#f0d7a8;border-color:#e2c284;box-shadow:0 5px 20px #c9a04e15;transform:translateY(-2px)}
+.text-link:hover{color:var(--emerald)}.text-link:hover svg,.button:hover svg,.nav-cta:hover svg{transform:translate(3px,-1px)}
+.trust-grid a:hover{border-color:var(--emerald);transform:translateY(-3px)}
+.footer-grid a:hover,.legal-links a:hover{color:var(--gold-bright);text-decoration-color:currentColor}
+.nav-panel a:hover,[data-slot=accordion-trigger]:hover{background:#d2b37810;color:#f2dba9}
+tbody tr:hover{background:#c3a66e0c}
+}
+@keyframes nexus-enter{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes nexus-art{from{opacity:.4;transform:scale(1.025)}to{opacity:1;transform:scale(1)}}
+@media(prefers-reduced-motion:no-preference){.hero-copy,.page-hero h1{animation:nexus-enter .7s var(--ease-premium) both}.hero-actions,.page-hero>p{animation:nexus-enter .7s .1s var(--ease-premium) both}.hero-art{animation:nexus-art 1.2s var(--ease-premium) both}.mobile-nav{animation:nexus-enter .2s var(--ease-premium)}[data-slot=dialog-content]{animation-duration:.22s}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.feature:hover,.evidence-card:hover,.button:hover,.nav-cta:hover,.trust-grid a:hover{transform:none!important}}
+@media(max-width:700px){.feature,.content-section,.product-video{box-shadow:0 8px 20px #0003}.header{box-shadow:0 3px 16px #0003}.button,.nav-cta{min-height:44px}.hero-art{max-width:100%}}
+@media(forced-colors:active){.hero-copy h1>span{background:none;color:CanvasText}.feature,.evidence-card,.button,.badge{border:1px solid CanvasText}}
