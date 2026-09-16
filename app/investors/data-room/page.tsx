@@ -1,0 +1,5 @@
+import {requireChatGPTUser} from '@/app/chatgpt-auth';
+import {database} from '@/lib/db';
+export const dynamic='force-dynamic';
+export const metadata={title:'Investor Data Room',robots:{index:false,follow:false}};
+export default async function DataRoom(){const user=await requireChatGPTUser('/investors/data-room');let allowed=false,unavailable=false;try{allowed=!!await database().prepare('SELECT user_id FROM investor_grants WHERE user_id = ? AND expires_at > ?').bind(user.userId,Date.now()).first();}catch{unavailable=true}return <section className="error-page"><span className="eyebrow">CONTROLLED INVESTOR ACCESS</span><h1>{unavailable?'Access verification unavailable':allowed?'Investor data room':'Access has not been granted.'}</h1><p>{unavailable?'We could not verify your authorization. Please try again later. No private material is accessible.':allowed?'You have an active access grant. No private documents have been uploaded.':'Sign-in identifies you; an explicit investor access grant is also required. No confidential materials are available to this account.'}</p><a href="/contact?type=Investor" className="button gold-button">Request access →</a></section>}

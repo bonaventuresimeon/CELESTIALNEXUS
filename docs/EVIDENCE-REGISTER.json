@@ -1,0 +1,45 @@
+{
+  "reviewedAt": "2026-09-16",
+  "statusDefinitions": {
+    "LIVE": "Implemented and demonstrable in the stated scope",
+    "IN DEVELOPMENT": "Active implementation backed by evidence",
+    "ROADMAP": "Planned, not verified as available"
+  },
+  "website": {
+    "status": "LIVE",
+    "scope": "Website implementation, not trading infrastructure",
+    "evidence": [
+      "app/page.tsx",
+      "app/api/enquiries/route.ts",
+      "tests/content.test.mjs",
+      "tests/api.test.mjs"
+    ]
+  },
+  "tradingPlatform": {
+    "status": "IN DEVELOPMENT",
+    "reason": "Implementation reviewed in source; operational readiness and current deployment unverified",
+    "evidence": "docs/SOURCE-REVIEW.md"
+  },
+  "JOAN": {
+    "status": "IN DEVELOPMENT",
+    "reason": "Implementation reviewed in source; operational readiness and current deployment unverified",
+    "evidence": "docs/SOURCE-REVIEW.md"
+  },
+  "AWS": {
+    "status": "IN DEVELOPMENT",
+    "reason": "Implementation reviewed in source; operational readiness and current deployment unverified",
+    "evidence": "docs/SOURCE-REVIEW.md"
+  },
+  "securityProgram": {
+    "status": "IN DEVELOPMENT",
+    "reason": "Implementation reviewed in source; operational readiness and current deployment unverified",
+    "evidence": "docs/SOURCE-REVIEW.md"
+  },
+  "productScreenshots": {
+    "status": "LIVE",
+    "scope": "Historical product media gallery, not trading functionality",
+    "count": 10,
+    "evidence": "lib/media.json"
+  },
+  "sourceCommit": "626824752bae9e95516418b09189d0e2bee2f555"
+}

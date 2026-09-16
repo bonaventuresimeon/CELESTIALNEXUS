@@ -1,0 +1,72 @@
+[
+  {
+    "id": "accounts-and-market-quotes",
+    "src": "/product/accounts-and-market-quotes.png",
+    "preview": "/product/accounts-and-market-quotes-preview.webp",
+    "width": 709,
+    "height": 1536
+  },
+  {
+    "id": "ea-configuration",
+    "src": "/product/ea-configuration.jpg",
+    "preview": "/product/ea-configuration-preview.webp",
+    "width": 818,
+    "height": 1536
+  },
+  {
+    "id": "mt5-dual-chart-bridge",
+    "src": "/product/mt5-dual-chart-bridge.png",
+    "preview": "/product/mt5-dual-chart-bridge-preview.webp",
+    "width": 1536,
+    "height": 709
+  },
+  {
+    "id": "mt5-connection-diagnostics",
+    "src": "/product/mt5-connection-diagnostics.jpg",
+    "preview": "/product/mt5-connection-diagnostics-preview.webp",
+    "width": 1536,
+    "height": 829
+  },
+  {
+    "id": "ea-live-bridge",
+    "src": "/product/ea-live-bridge.jpg",
+    "preview": "/product/ea-live-bridge-preview.webp",
+    "width": 791,
+    "height": 1536
+  },
+  {
+    "id": "desktop-command-center",
+    "src": "/product/desktop-command-center.webp",
+    "preview": "/product/desktop-command-center-preview.webp",
+    "width": 1536,
+    "height": 960
+  },
+  {
+    "id": "sign-in",
+    "src": "/product/sign-in.jpg",
+    "preview": "/product/sign-in-preview.webp",
+    "width": 952,
+    "height": 1536
+  },
+  {
+    "id": "command-center",
+    "src": "/product/command-center.jpg",
+    "preview": "/product/command-center-preview.webp",
+    "width": 788,
+    "height": 1536
+  },
+  {
+    "id": "news-and-macro",
+    "src": "/product/news-and-macro.jpg",
+    "preview": "/product/news-and-macro-preview.webp",
+    "width": 784,
+    "height": 1536
+  },
+  {
+    "id": "mobile-command-center",
+    "src": "/product/mobile-command-center.png",
+    "preview": "/product/mobile-command-center-preview.webp",
+    "width": 709,
+    "height": 1536
+  }
+]

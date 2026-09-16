@@ -1,0 +1,1 @@
+export default function Maintenance(){return <section className="error-page"><span className="eyebrow">MAINTENANCE INFORMATION</span><h1>Planned maintenance notices.</h1><p>No verified maintenance schedule is currently published. Service monitoring is not connected.</p><a href="/status" className="button gold-button">View status →</a></section>}

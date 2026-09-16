@@ -1,0 +1,11 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {DatabaseSync} from 'node:sqlite';
+const db = new DatabaseSync(':memory:');
+db.exec(readFileSync('drizzle/0000_happy_the_leader.sql','utf8'));
+const source=readFileSync('app/api/enquiries/route.ts','utf8');
+const sql=source.match(/db\.prepare\('([^']+)'\)/)[1];
+test('durable SQL limit accepts five enquiries and rejects the sixth',()=>{for(let i=0;i<6;i++){const result=db.prepare(sql).run('id'+i,'Test','qa@example.com','Test','General','Synthetic test message',1000,'testhash','testhash',0);assert.equal(result.changes,i<5?1:0)}assert.equal(db.prepare('SELECT COUNT(*) AS n FROM enquiries').get().n,5)});
+test('rate limit permits a new window and keeps identities separate',()=>{assert.equal(db.prepare(sql).run('later','Test','qa@example.com','','General','Synthetic test message',4000000,'testhash','testhash',3999000).changes,1);assert.equal(db.prepare(sql).run('other','Test','qa@example.com','','General','Synthetic test message',1000,'otherhash','otherhash',0).changes,1)});
+test('investor grant denies absent and expired users',()=>{const query=db.prepare('SELECT user_id FROM investor_grants WHERE user_id = ? AND expires_at > ?');assert.equal(query.get('unknown',100),undefined);db.prepare('INSERT INTO investor_grants VALUES (?,?)').run('expired',50);assert.equal(query.get('expired',100),undefined);db.prepare('INSERT INTO investor_grants VALUES (?,?)').run('active',500);assert.equal(query.get('active',100).user_id,'active')});

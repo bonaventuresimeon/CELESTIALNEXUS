@@ -1,0 +1,1 @@
+export default function robots(){return {rules:{userAgent:'*',allow:'/',disallow:['/api/','/investors/data-room','/admin/']},sitemap:(process.env.NEXT_PUBLIC_SITE_URL||'https://celestialnexus-global.jayiwus.chatgpt.site')+'/sitemap.xml'}}

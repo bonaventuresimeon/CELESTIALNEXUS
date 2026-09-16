@@ -1,0 +1,1 @@
+export default function Offline(){return <section className="error-page"><span className="eyebrow">CONNECTION UNAVAILABLE</span><h1>Reconnect to continue.</h1><p>This website does not provide offline market data or execution. If a form submission failed, return to the form and retry after reconnecting.</p><a href="/" className="button gold-button">Try again →</a></section>}

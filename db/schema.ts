@@ -1,0 +1,3 @@
+import {sqliteTable,text,integer,index} from 'drizzle-orm/sqlite-core';
+export const enquiries=sqliteTable('enquiries',{id:text('id').primaryKey(),name:text('name').notNull(),email:text('email').notNull(),organization:text('organization').notNull(),category:text('category').notNull(),message:text('message').notNull(),createdAt:integer('created_at').notNull(),identityHash:text('identity_hash').notNull()},t=>[index('enquiries_identity_time').on(t.identityHash,t.createdAt)]);
+export const investorGrants=sqliteTable('investor_grants',{userId:text('user_id').primaryKey(),expiresAt:integer('expires_at').notNull()});

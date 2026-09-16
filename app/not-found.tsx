@@ -1,0 +1,1 @@
+export default function NotFound(){return <section className="error-page"><span className="eyebrow">404 / PAGE NOT FOUND</span><h1>A different path forward.</h1><p>This page does not exist. Explore the platform or return to the documentation.</p><a className="button gold-button" href="/">Return home →</a></section>}
